@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>První hodina HTML 🌐</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #f0f7ff, #ffffff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #0078d4;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 5px solid #005fa3;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+    }
+    h2 {
+      color: #005fa3;
+      border-bottom: 2px solid #cce0ff;
+      padding-bottom: 0.3rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      background: #f9fcff;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    code {
+      background: #e8eef7;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #e8eef7;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    img {
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #005fa3;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 První hodina HTML</h1>
+    <p>Rekapitulace základních značek a jejich použití</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1️⃣ Nadpisy (headings)</h2>
+      <p>V HTML existují nadpisy od <code>&lt;h1&gt;</code> do <code>&lt;h6&gt;</code>. Čím větší číslo, tím menší nadpis.</p>
+      <pre><code>&lt;h1&gt;Největší nadpis&lt;/h1&gt;
+&lt;h2&gt;Menší nadpis&lt;/h2&gt;
+&lt;h3&gt;Ještě menší&lt;/h3&gt;</code></pre>
+      <h1>Největší nadpis</h1>
+      <h2>Menší nadpis</h2>
+      <h3>Ještě menší</h3>
+    </section>
+
+    <section>
+      <h2>2️⃣ Obrázky</h2>
+      <p>Pro vložení obrázku používáme značku <code>&lt;img&gt;</code> s atributy <code>src</code> (zdroj) a <code>alt</code> (popis).</p>
+      <pre><code>&lt;img src="kocickaaaaa.webp" alt="kocicka není dostupná" height="80"&gt;</code></pre>
+      <img src="https://placekitten.com/300/180" alt="Roztomilá kočka" height="150">
+    </section>
+
+    <section>
+      <h2>3️⃣ Odkazy (linky)</h2>
+      <p>Odkazy se dělají pomocí značky <code>&lt;a&gt;</code> a atributu <code>href</code>.</p>
+      <pre><code>&lt;a href="https://www.ghb.cz"&gt;Velká budova&lt;/a&gt;</code></pre>
+      <a href="https://www.ghb.cz" target="_blank">🏫 Velká budova (otevřít v novém okně)</a>
+    </section>
+
+    <section>
+      <h2>4️⃣ Odstavce a mezery</h2>
+      <p>HTML ignoruje více mezer a zalomení řádků — vše zobrazuje jako jednu mezeru.</p>
+      <pre><code>&lt;p&gt;Tento text
+má hodně
+řádků,
+ale HTML je spojí dohromady.&lt;/p&gt;</code></pre>
+      <p>Tento text  
+      má hodně  
+      řádků,  
+      ale HTML je spojí dohromady.</p>
+      <p>Pokud chceš **ruční zalomení řádku**, použij <code>&lt;br&gt;</code>.</p>
+      <pre><code>Ahoj,<br>toto je nový řádek.</code></pre>
+      <p>Ahoj,<br>toto je nový řádek.</p>
+    </section>
+
+    <section>
+      <h2>5️⃣ Barvy a styly</h2>
+      <p>Pomocí atributu <code>style</code> můžeme měnit vzhled prvku (např. barvu textu).</p>
+      <pre><code>&lt;p style="color: red"&gt;Tento text je červený&lt;/p&gt;</code></pre>
+      <p style="color:red;">Tento text je červený ❤️</p>
+    </section>
+
+    <section>
+      <h2>6️⃣ Linie a nápovědy</h2>
+      <p><code>&lt;hr&gt;</code> vytvoří vodorovnou čáru, <code>title</code> ukáže nápovědu po najetí myší.</p>
+      <pre><code>&lt;p title="Tajná zpráva!"&gt;Najdi nápovědu!&lt;/p&gt;
+&lt;hr&gt;</code></pre>
+      <p title="Tajná zpráva!">🕵️ Najdi nápovědu – najeď myší!</p>
+      <hr>
+    </section>
+
+    <section>
+      <h2>7️⃣ Speciální znaky</h2>
+      <p>V HTML musíme psát speciální znaky pomocí kódů:</p>
+      <ul>
+        <li><code>&amp;lt;</code> = &lt;</li>
+        <li><code>&amp;gt;</code> = &gt;</li>
+        <li><code>&amp;amp;</code> = &amp;</li>
+        <li><code>&amp;nbsp;</code> = mezera</li>
+      </ul>
+      <p>Např. kód: <code>&amp;lt;h1&amp;gt;Ahoj&amp;lt;/h1&amp;gt;</code> zobrazí → <h1>Ahoj</h1></p>
+      <p><strong>Jak napsat &lt; a &gt; na české klávesnici?</strong><br>
+        <span style="color:#0078d4;">Stiskni pravý Alt (AltGr) + , pro <code>&lt;</code> a pravý Alt (AltGr) + . pro <code>&gt;</code>.</span>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 | Vytvořeno v hodině ICT 🖥️ | Gymnázium Havlíčkův Brod
+  </footer>
+</body>
+</html>
