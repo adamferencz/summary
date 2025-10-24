@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary 2 - Co jsme se naučili</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffd6e8 0%, #ffc8dd 100%);
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+      h1 {
+        color: #5d046c;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+      .subtitle {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 30px;
+      }
+      h2 {
+        color: #5d046c;
+        border-bottom: 3px solid #ffc8dd;
+        padding-bottom: 8px;
+        margin-top: 30px;
+      }
+      .lesson-box {
+        background: #fff5f9;
+        border-left: 5px solid #5d046c;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .code-example {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 5px;
+        font-family: "Courier New", monospace;
+        margin: 10px 0;
+        overflow-x: auto;
+      }
+      .result {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      ul {
+        margin-left: 20px;
+      }
+      li {
+        margin: 8px 0;
+      }
+      .tip {
+        background: #fff9c4;
+        border-left: 4px solid #fbc02d;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .important {
+        color: #d32f2f;
+        font-weight: bold;
+      }
+      .demo-white {
+        color: white;
+        background: #333;
+        padding: 8px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+      .demo-red {
+        color: red;
+      }
+      .download-button {
+        background: #5d046c;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 8px;
+        display: inline-block;
+        margin: 20px 0;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      .download-button:hover {
+        background: #8a0ab0;
+      }
+      .download-section {
+        text-align: center;
+        background: #f0e6ff;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+      .navigation {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+      .nav-button {
+        display: inline-block;
+        background: white;
+        color: #5d046c;
+        padding: 10px 20px;
+        margin: 5px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+      }
+      .nav-button:hover {
+        background: #f0e6ff;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <a href="index.html" class="nav-button">🏠 Hlavní menu</a>
+        <a href="hodina1.html" class="nav-button">⬅️ Hodina 1</a>
+        <a href="../hodina2/index.html" class="nav-button"
+          >📄 Originální hodina</a
+        >
+      </div>
+
+      <h1>📚 Co jsme se naučili?</h1>
+      <p class="subtitle">Shrnutí HTML a CSS konceptů ze stránky o seriálech</p>
+
+      <div class="download-section">
+        <h3>📥 Stáhnout originální stránku</h3>
+        <p>Chceš si projít a prostudovat originální stránku o seriálech?</p>
+        <a
+          href="../hodina2/index.html"
+          download="hodina2-serialy.html"
+          class="download-button"
+        >
+          ⬇️ Stáhnout hodina2.html
+        </a>
+      </div>
+
+      <h2>1. Struktura HTML dokumentu</h2>
+      <div class="lesson-box">
+        <p>Každá HTML stránka má základní strukturu:</p>
+        <div class="code-example">
+          &lt;!DOCTYPE html&gt;<br />
+          &lt;html lang="en"&gt;<br />
+          &nbsp;&nbsp;&lt;head&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Document&lt;/title&gt;<br />
+          &nbsp;&nbsp;&lt;/head&gt;<br />
+          &nbsp;&nbsp;&lt;body&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;...obsah stránky...<br />
+          &nbsp;&nbsp;&lt;/body&gt;<br />
+          &lt;/html&gt;
+        </div>
+        <ul>
+          <li><code>&lt;!DOCTYPE html&gt;</code> - Deklarace typu dokumentu</li>
+          <li>
+            <code>&lt;head&gt;</code> - Metadata stránky (charset, title, styly)
+          </li>
+          <li><code>&lt;body&gt;</code> - Viditelný obsah stránky</li>
+        </ul>
+      </div>
+
+      <h2>2. Nadpisy a odstavce</h2>
+      <div class="lesson-box">
+        <p>Pro strukturování obsahu používáme:</p>
+        <ul>
+          <li><code>&lt;h1&gt;</code> - Hlavní nadpis (největší)</li>
+          <li><code>&lt;h2&gt;</code> - Podnadpis (menší)</li>
+          <li><code>&lt;p&gt;</code> - Odstavec textu</li>
+        </ul>
+        <div class="code-example">
+          &lt;h1&gt;Neljepší seriály&lt;/h1&gt;<br />
+          &lt;h2&gt;Breaking bad&lt;/h2&gt;<br />
+          &lt;p&gt;Breaking Bad je americký televizní seriál...&lt;/p&gt;
+        </div>
+      </div>
+
+      <h2>3. Seznamy</h2>
+      <div class="lesson-box">
+        <p>
+          Pro vytvoření seznamu používáme <code>&lt;ul&gt;</code> (unordered
+          list) a <code>&lt;li&gt;</code> (list item):
+        </p>
+        <div class="code-example">
+          &lt;ul&gt;<br />
+          &nbsp;&nbsp;&lt;li&gt;Breaking bad&lt;/li&gt;<br />
+          &nbsp;&nbsp;&lt;li&gt;Game of Thrones&lt;/li&gt;<br />
+          &nbsp;&nbsp;&lt;li&gt;Stranger Things&lt;/li&gt;<br />
+          &lt;/ul&gt;
+        </div>
+        <div class="result">
+          <strong>Výsledek:</strong>
+          <ul>
+            <li>Breaking bad</li>
+            <li>Game of Thrones</li>
+            <li>Stranger Things</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>4. CSS Styly uvnitř HTML</h2>
+      <div class="lesson-box">
+        <p>
+          Styly můžeme psát přímo do <code>&lt;style&gt;</code> tagu v sekci
+          <code>&lt;head&gt;</code>:
+        </p>
+        <div class="code-example">
+          &lt;style&gt;<br />
+          &nbsp;&nbsp;h2 {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(93, 4, 108);<br />
+          &nbsp;&nbsp;}<br />
+          &lt;/style&gt;
+        </div>
+        <p>
+          Toto nastaví <span class="important">všechny</span> nadpisy
+          <code>&lt;h2&gt;</code> na fialovou barvu.
+        </p>
+      </div>
+
+      <h2>5. Inline styly</h2>
+      <div class="lesson-box">
+        <p>
+          Můžeme stylovat přímo v HTML tagu pomocí atributu <code>style</code>:
+        </p>
+        <div class="code-example">
+          &lt;body style="background-color: pink"&gt;
+        </div>
+        <p>Toto nastaví růžové pozadí celé stránky.</p>
+      </div>
+
+      <h2>6. CSS Třídy (Classes)</h2>
+      <div class="lesson-box">
+        <p>
+          <span class="important">Třídy</span> nám umožňují stylovat vybrané
+          prvky. Definujeme je pomocí tečky <code>.</code>:
+        </p>
+
+        <h3>Příklad 1: Třída .white-title</h3>
+        <div class="code-example">
+          .white-title {<br />
+          &nbsp;&nbsp;color: white;<br />
+          }
+        </div>
+        <p>Použití:</p>
+        <div class="code-example">
+          &lt;h2 class="white-title"&gt;Breaking bad&lt;/h2&gt;
+        </div>
+        <div class="result">
+          <strong>Výsledek:</strong>
+          <span class="demo-white">Breaking bad</span> (bílý text)
+        </div>
+
+        <div class="tip">
+          <strong>💡 Tip:</strong> Třídu můžeme použít na jakýkoliv prvek pomocí
+          <code>class="nazev-tridy"</code>
+        </div>
+      </div>
+
+      <h2>7. Kontextové selektory</h2>
+      <div class="lesson-box">
+        <p>
+          Můžeme stylovat prvky
+          <span class="important">pouze uvnitř</span> určité třídy nebo tagu:
+        </p>
+        <div class="code-example">
+          .red-section h2 {<br />
+          &nbsp;&nbsp;color: red;<br />
+          }
+        </div>
+        <p>
+          Toto nastaví <code>&lt;h2&gt;</code> na červenou barvu
+          <span class="important">pouze</span> uvnitř prvku s třídou
+          <code>red-section</code>.
+        </p>
+
+        <h3>Použití:</h3>
+        <div class="code-example">
+          &lt;div class="red-section"&gt;<br />
+          &nbsp;&nbsp;&lt;h2&gt;Breaking bad&lt;/h2&gt;
+          <em>&lt;-- bude červený</em><br />
+          &lt;/div&gt;<br />
+          &lt;h2&gt;Game of Thrones&lt;/h2&gt; <em>&lt;-- nebude červený</em>
+        </div>
+        <div class="result">
+          <strong>Výsledek:</strong><br />
+          <span class="demo-red">Breaking bad</span> (červený nadpis v sekci)<br />
+          <span style="color: rgb(93, 4, 108)">Game of Thrones</span> (normální
+          fialový nadpis)
+        </div>
+      </div>
+
+      <h2>8. Oddělovací čára &lt;hr&gt;</h2>
+      <div class="lesson-box">
+        <p>
+          Tag <code>&lt;hr&gt;</code> vytvoří vodorovnou čáru pro oddělení
+          obsahu:
+        </p>
+        <div class="code-example">&lt;hr&gt;</div>
+        <div class="result">
+          <strong>Výsledek:</strong>
+          <hr />
+        </div>
+      </div>
+
+      <h2>9. Kontejnery - &lt;div&gt;</h2>
+      <div class="lesson-box">
+        <p>
+          Tag <code>&lt;div&gt;</code> slouží jako kontejner pro seskupení
+          prvků:
+        </p>
+        <div class="code-example">
+          &lt;div class="red-section"&gt;<br />
+          &nbsp;&nbsp;&lt;h2&gt;Breaking bad&lt;/h2&gt;<br />
+          &nbsp;&nbsp;&lt;p&gt;Popis seriálu...&lt;/p&gt;<br />
+          &lt;/div&gt;
+        </div>
+        <p>
+          Všechny prvky uvnitř <code>&lt;div&gt;</code> můžeme společně stylovat
+          pomocí třídy.
+        </p>
+      </div>
+
+      <h2>10. RGB barvy</h2>
+      <div class="lesson-box">
+        <p>Barvy můžeme zadávat v RGB formátu (Red, Green, Blue):</p>
+        <div class="code-example">color: rgb(93, 4, 108);</div>
+        <p>Hodnoty jsou od 0 do 255 pro každou barvu:</p>
+        <ul>
+          <li><code>rgb(255, 0, 0)</code> - Červená</li>
+          <li><code>rgb(0, 255, 0)</code> - Zelená</li>
+          <li><code>rgb(0, 0, 255)</code> - Modrá</li>
+          <li><code>rgb(93, 4, 108)</code> - Fialová (z našeho příkladu)</li>
+        </ul>
+      </div>
+
+      <h2>📝 Shrnutí naučených konceptů</h2>
+      <div class="lesson-box">
+        <ul>
+          <li>✅ Základní struktura HTML dokumentu</li>
+          <li>
+            ✅ Nadpisy <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> a
+            odstavce <code>&lt;p&gt;</code>
+          </li>
+          <li>✅ Seznamy <code>&lt;ul&gt;</code> a <code>&lt;li&gt;</code></li>
+          <li>✅ CSS styly v sekci <code>&lt;style&gt;</code></li>
+          <li>✅ Inline styly pomocí atributu <code>style</code></li>
+          <li>✅ CSS třídy (classes) pomocí <code>class="nazev"</code></li>
+          <li>✅ Kontextové selektory (např. <code>.red-section h2</code>)</li>
+          <li>✅ Kontejnery <code>&lt;div&gt;</code></li>
+          <li>✅ RGB barvy</li>
+          <li>✅ Oddělovací čára <code>&lt;hr&gt;</code></li>
+        </ul>
+      </div>
+
+      <div class="tip">
+        <strong>🎯 Praktický tip:</strong> Rozdíl mezi inline stylem a třídou:
+        <ul>
+          <li>
+            <strong>Inline:</strong>
+            <code>&lt;h2 style="color: white"&gt;</code> - styluje pouze tento
+            jeden prvek
+          </li>
+          <li>
+            <strong>Třída:</strong>
+            <code>&lt;h2 class="white-title"&gt;</code> - můžeme použít na více
+            prvků najednou
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+      <div style="text-align: center; margin-top: 30px">
+        <a href="index.html" class="nav-button">🏠 Zpět na hlavní menu</a>
+        <a href="hodina1.html" class="nav-button">⬅️ Hodina 1</a>
+      </div>
+      <p
+        style="
+          text-align: center;
+          color: #666;
+          font-size: 0.9em;
+          margin-top: 20px;
+        "
+      >
+        © 2025 | Edukační materiál HTML kurzu 🌐
+      </p>
+    </div>
+  </body>
+</html>
